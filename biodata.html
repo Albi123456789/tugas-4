@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Biodata Diri – Ahmadalby Wildanhabibi</title>
+  <meta name="description" content="Biodata diri sederhana, rapi, dan responsif, siap cetak PDF." />
+  <style>
+    :root{
+      --bg: #0f172a;          /* slate-900 */
+      --card: #111827;        /* gray-900 */
+      --muted: #9ca3af;       /* gray-400 */
+      --text: #e5e7eb;        /* gray-200 */
+      --accent: #22d3ee;      /* cyan-400 */
+      --chip: #1f2937;        /* gray-800 */
+      --border: #374151;      /* gray-700 */
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Noto Sans", Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      color:var(--text); background: radial-gradient(1000px 600px at 10% 0%, #0b1220 0%, var(--bg) 50%), var(--bg);
+      line-height:1.5;
+    }
+    .container{max-width:1000px; margin:40px auto; padding:24px}
+
+    .card{
+      background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.0));
+      backdrop-filter: blur(6px);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      overflow:hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,.35);
+    }
+
+    header{
+      display:grid; grid-template-columns: 220px 1fr; gap:24px; align-items:center; padding:28px;
+      border-bottom:1px solid var(--border);
+      background: linear-gradient(90deg, rgba(34,211,238,.08), transparent);
+    }
+    @media (max-width: 720px){
+      header{grid-template-columns:1fr; text-align:center}
+    }
+
+    .avatar{
+      width:220px; aspect-ratio:3/4; object-fit:cover; border-radius:20px; border:2px solid var(--border);
+      background:#0b1220;
+    }
+
+    .title h1{margin:0 0 6px;font-size:clamp(24px, 4vw, 36px); letter-spacing:.2px}
+    .title .role{color:var(--muted); font-size:clamp(14px,2.4vw,16px)}
+    .meta{display:flex; flex-wrap:wrap; gap:10px; margin-top:14px}
+    .meta a, .meta span{display:inline-flex; align-items:center; gap:8px; padding:8px 12px; border-radius:999px; background:var(--chip); border:1px solid var(--border); color:var(--text); text-decoration:none; font-size:14px}
+
+    main{display:grid; grid-template-columns:1.2fr .8fr; gap:24px; padding:24px}
+    @media (max-width: 960px){ main{grid-template-columns:1fr} }
+
+    section{background:#0b1220; border:1px solid var(--border); border-radius:18px; padding:18px}
+    h2{margin:0 0 12px; font-size:18px; letter-spacing:.3px}
+    .list{margin:0; padding:0; list-style:none}
+    .list li{padding:10px 0; border-bottom:1px dashed #243244}
+    .list li:last-child{border-bottom:none}
+    .label{display:block; font-size:12px; color:var(--muted)}
+    .value{font-size:15px}
+
+    .grid-2{display:grid; grid-template-columns:1fr 1fr; gap:12px}
+    @media (max-width: 600px){ .grid-2{grid-template-columns:1fr} }
+
+    .skills{display:flex; flex-wrap:wrap; gap:8px}
+    .skills span{padding:8px 12px; border-radius:999px; background:var(--chip); border:1px solid var(--border); font-size:13px}
+
+    footer{padding:16px 24px 24px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px}
+    .btn{appearance:none; border:1px solid var(--border); background:var(--chip); color:var(--text); padding:10px 14px; border-radius:12px; cursor:pointer; font-size:14px}
+
+    /* Cetak rapi ke PDF */
+    @media print{
+      body{background:#fff; color:#111}
+      .container{max-width:100%; margin:0; padding:0}
+      .card{border:none; box-shadow:none; border-radius:0}
+      header, section, footer{background:#fff; border-color:#ddd}
+      .avatar{border-color:#ddd}
+      .btn{display:none}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card" role="region" aria-label="Biodata Diri">
+      <header>
+        <!-- Ganti src ke foto Anda sendiri -->
+        <img class="avatar" src="foto 1.jpg" alt="Foto profil Ahmadalby Wildanhabibi" />
+        <div class="title">
+          <h1>Ahmadalby Wildanhabibi</h1>
+          <div class="role">Siswa – Rekayasa Perangkat Lunak (RPL)</div>
+          <div class="meta">
+            <a href="mailto:alby@example.com" aria-label="Email">📧 alby@example.com</a>
+            <a href="https://wa.me/6281234567890" target="_blank" rel="noopener" aria-label="WhatsApp">💬 0812-3456-7890</a>
+            <span aria-label="Lokasi">📍 Jember, Jawa Timur</span>
+            <a href="https://instagram.com/username" target="_blank" rel="noopener" aria-label="Instagram">📸 @username</a>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section>
+          <h2>Tentang Saya</h2>
+          <p>Halo! Saya siswa RPL yang suka membangun website dan aplikasi sederhana. Tertarik pada frontend, UI/UX, dan otomasi kecil-kecilan. Senang belajar hal baru dan bekerja dalam tim.</p>
+
+          <div class="grid-2" style="margin-top:10px">
+            <ul class="list">
+              <li><span class="label">Nama Lengkap</span><span class="value">Ahmadalby Wildanhabibi</span></li>
+              <li><span class="label">Nama Panggilan</span><span class="value">Alby</span></li>
+              <li><span class="label">Tanggal Lahir</span><span class="value">12 Mei 2008</span></li>
+              <li><span class="label">Jenis Kelamin</span><span class="value">Laki-laki</span></li>
+            </ul>
+            <ul class="list">
+              <li><span class="label">Alamat</span><span class="value">Jl. Mawar No. 10, Jember</span></li>
+              <li><span class="label">Agama</span><span class="value">Islam</span></li>
+              <li><span class="label">Kewarganegaraan</span><span class="value">Indonesia</span></li>
+              <li><span class="label">Bahasa</span><span class="value">Indonesia, Inggris (dasar)</span></li>
+            </ul>
+          </div>
+        </section>
+
+        <section>
+          <h2>Pendidikan</h2>
+          <ul class="list">
+            <li>
+              <span class="label">2023 – sekarang</span>
+              <span class="value">SMK Negeri Contoh – Rekayasa Perangkat Lunak</span>
+            </li>
+            <li>
+              <span class="label">2020 – 2023</span>
+              <span class="value">SMP Negeri Contoh</span>
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Keahlian</h2>
+          <div class="skills">
+            <span>HTML & CSS</span>
+            <span>JavaScript Dasar</span>
+            <span>Bootstrap</span>
+            <span>Canva/Figma</span>
+            <span>Git & GitHub</span>
+            <span>Microsoft Office</span>
+          </div>
+        </section>
+
+        <section>
+          <h2>Hobi & Minat</h2>
+          <div class="skills">
+            <span>Ngoding</span>
+            <span>Desain</span>
+            <span>Gaming</span>
+            <span>Fotografi</span>
+            <span>Olahraga</span>
+          </div>
+        </section>
+
+        <section>
+          <h2>Projek Singkat</h2>
+          <ul class="list">
+            <li>
+              <span class="label">Website Portofolio</span>
+              <span class="value">Membangun portofolio pribadi sederhana menggunakan HTML, CSS, dan sedikit JavaScript.</span>
+            </li>
+            <li>
+              <span class="label">Galeri Foto Sekolah</span>
+              <span class="value">Membuat galeri dengan modal Bootstrap untuk dokumentasi kegiatan sekolah.</span>
+            </li>
+          </ul>
+        </section>
+      </main>
+
+      <footer>
+        <button class="btn" onclick="window.print()">🖨️ Cetak / Simpan PDF</button>
+        <small style="color:var(--muted)">Terakhir diperbarui: <span id="updated"></span></small>
+      </footer>
+    </div>
+  </div>
+
+  <script>
+    // Tampilkan tanggal diperbarui otomatis (lokal Indonesia)
+    const el = document.getElementById('updated');
+    const fmt = new Intl.DateTimeFormat('id-ID', { dateStyle: 'long' });
+    el.textContent = fmt.format(new Date());
+  </script>
+</body>
+</html>
